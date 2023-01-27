@@ -1,0 +1,3 @@
+ex1p4: ex1p4.c 
+    gcc -o ex1p4 ex1p4.c -I.
+
