@@ -1,3 +1,14 @@
+/**
+ * @file integers.c
+ * @author Hadrian Hu (hadrian.hu@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2023-01-29
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include <stdio.h>
 int main(int argc, char ** argv);// function prototype for main 
 
