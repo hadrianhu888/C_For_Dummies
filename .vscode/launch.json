@@ -1,5 +1,5 @@
 {
-"version": "0.2.0",
+  "version": "0.2.0",
   "configurations": [
     {
       "name": "(gdb) Bash on Windows Attach",
@@ -10,7 +10,9 @@
       "pipeTransport": {
         "debuggerPath": "C:/cygwin64/bin/gdb.exe",
         "pipeProgram": "${env:windir}\\system32\\bash.exe",
-        "pipeArgs": ["-c"],
+        "pipeArgs": [
+          "-c"
+        ],
         "pipeCwd": ""
       },
       "setupCommands": [
@@ -26,7 +28,6 @@
         }
       ]
     },
-
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
@@ -34,8 +35,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "f:/GitHubRepos/C_For_Dummies/ex1",
-      "program": "f:/GitHubRepos/C_For_Dummies/ex1/build/Debug/outDebug",
+      "cwd": "f:/GitHubRepos/C_For_Dummies",
+      "program": "f:/GitHubRepos/C_For_Dummies/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
