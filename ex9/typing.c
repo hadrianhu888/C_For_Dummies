@@ -24,7 +24,11 @@ int main (int argc, char ** argv) {
         ch = getchar();
         if (ch == '\n') {
             break;
-        }	
+        } else if (ch == '~' || ch == '`') {
+            break;
+        } else {
+            continue;
+        }
     }
     return 0;
 }
