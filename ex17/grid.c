@@ -14,7 +14,6 @@
 int main(int argc, char *argv[]); // function prototype
 
 int main(int argc, char *argv[]) {
-    int c = 0;
     char a = 'a';
     char b = 'b';
     while (a <= 'z') {
