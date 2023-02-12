@@ -14,6 +14,7 @@
 #include <string.h>
 #include <assert.h>
 #include <errno.h>
+#include <ctype.h>
 
 int main(int argc, char *argv[]); // function prototype
 
