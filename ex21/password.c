@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     char password[] = "password";
     int result; 
     printf("Enter the password: ");
-    gets(string);
+    scanf("%s", &string);
     result = strcmp(string, password);
     if (result == 0) {
         printf("Access granted.\n");

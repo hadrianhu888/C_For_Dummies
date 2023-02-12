@@ -4,7 +4,6 @@
  * @brief 
  * @version 0.1
  * @date 2023-02-11
- * 
  * @copyright Copyright (c) 2023
  * 
  */
@@ -39,11 +38,11 @@ int main(int argc, char *argv[]) {
     puts("Let see if you can name all the dwarves.");
     while (1) {
         printf("Name a dwarf: ");
-        gets(input);
+        scanf("%s", &input);
         for (x = 0; x < 7; x++) {
             if (strcmp(input, dwarfs[x][0]) == 0) {
                 printf("Correct! %s is a dwarf.\n", input);
-                break;w
+                break;
             }
         }
         if (x == 7) {

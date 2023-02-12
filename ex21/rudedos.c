@@ -21,13 +21,13 @@ int main(int argc, char *argv[]) {
     char command[100];
     char response[] = "You think I know how to...";
     char new_response[200];
-    while (strcasecmp(command, "quit") != 0) {
+    while (strcasecmp(command,"quit") != 0) {
         printf("What do you want to do? ");
-        gets(command);
+        scanf_s("%s",100, command);
         if (strcasecmp(command, "quit") != 0) {
-            strcpy(new_response, response);
-            strcat(new_response, command);
-            strcat(new_response, "?");
+            strcpy_s(new_response, 200, response);
+            strcat_s(new_response, 100, command);
+            strcat_s(new_response, 200, "?");
             puts(new_response);
         }
     }

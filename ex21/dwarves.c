@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     puts("Let see if you can name all the dwarves.");
     for (x = 0; x < 7; x++) {
         printf("Name a dwarf: ");
-        gets(input);
+        scanf("%s", &input);
         if (strcmp(input, dwarf[x]) == 0) {
             printf("Correct! %s is a dwarf.\n", input);
         } else {

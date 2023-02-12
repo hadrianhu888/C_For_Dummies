@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     char input[100];
     int size, c; 
     printf("Enter a string: ");
-    gets(input);
+    scanf_s(input, 100);    // scanf_s is a safer version of scanf
     size = strlen(input);
 
     puts("This is how we say it backwards:");
