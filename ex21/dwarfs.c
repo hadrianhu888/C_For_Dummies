@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
         for (x = 0; x < 7; x++) {
             if (strcmp(input, dwarfs[x][0]) == 0) {
                 printf("Correct! %s is a dwarf.\n", input);
-                break;
+                break;w
             }
         }
         if (x == 7) {
