@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "f:/GitHubRepos/C_For_Dummies/ex24",
-      "program": "f:/GitHubRepos/C_For_Dummies/ex24/build/Debug/outDebug",
+      "cwd": "f:/GitHubRepos/C_For_Dummies",
+      "program": "f:/GitHubRepos/C_For_Dummies/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -20,7 +20,7 @@ int main(int argc, char *argv[]); // function prototype
 void show_prompt(void); // function prototype
 
 void show_prompt(void) {
-    printf("What is my bidding?\n");
+    printf("What is thy bidding?\n");
 }
 
 int main(int argc, char *argv[]) {
@@ -37,3 +37,5 @@ int main(int argc, char *argv[]) {
     puts("Oh! Apparently, I did! Goodbye!");
     return 0;
 }
+
+
