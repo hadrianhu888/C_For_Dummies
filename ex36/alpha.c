@@ -11,10 +11,38 @@
 
 #include <stdio.h>
 
-int main(int argc, char *argv[])
+void alpha(void);
+void beta(void);
+void gamma(void);
+void a(void);
+
+void a(void)
+{
+    printf("Hello from a!\n");
+}
+
+int main(int argc, char *argv[])_Analysis_noreturn_
 {
     printf("Hello World!\n");
-    b(); 
+    a(); 
+    alpha();
+    beta();
+    gamma();
     return 0;
+}
+
+void alpha(void)
+{
+    printf("I am alpha.\n");
+}
+
+void beta(void)
+{
+    printf("I am beta.\n");
+}
+
+void gamma(void)
+{
+    printf("I am gamma.\n");
 }
 
