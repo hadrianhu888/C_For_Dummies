@@ -21,7 +21,7 @@ void a(void)
     printf("Hello from a!\n");
 }
 
-int main(int argc, char *argv[])_Analysis_noreturn_
+int main(int argc, char *argv[])
 {
     printf("Hello World!\n");
     a(); 
