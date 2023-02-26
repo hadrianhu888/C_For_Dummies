@@ -22,6 +22,7 @@
  */
 
 void convert_english_2_pig_latin(char *str);
+char *convert_to_pig_latin(char *str);
 int main(int argc, char *argv[]) {
   char str[100];
   printf("Enter a string: ");
@@ -29,6 +30,19 @@ int main(int argc, char *argv[]) {
   convert_english_2_pig_latin(str);
   printf("Pig Latin: %s\n", str);
   return 0;
+}
+
+char *convert_to_pig_latin(char *str) {
+  char *start = str;
+  char *end = str + strlen(str) - 1;
+  while (start < end) {
+    char temp = *start;
+    *start = *end;
+    *end = temp;
+    start++;
+    end--;
+  }
+  return str;
 }
 
 void convert_english_2_pig_latin(char *str) {
