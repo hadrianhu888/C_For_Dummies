@@ -241,6 +241,7 @@ int main(int argc,char **argv)
     add_item(4);
     print_list();
     modify_item();
+    print_list();
     printf("\n");
     return 0;
 }
