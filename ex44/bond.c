@@ -30,21 +30,27 @@ typedef struct jb{
 jb *first_item; 
 jb *current_item;
 jb *last_item;
+
+#define RECORDS 6
+
 int main(int argc,char **argv);
 
 int main(int argc,char **argv){
+    char *bonds[RECORDS]={"Sean Connery"," George Lazenby"," Roger Moore"," Timothy Dalton"," Pierce Brosnan"," Daniel Craig"};
     int i;
     first_item = (jb *)malloc(sizeof(jb));
     current_item = first_item;
-    for(i=0;i<10;i++){
-        current_item->next = (jb *)malloc(sizeof(jb));
-        current_item = current_item->next;
-        sprintf(current_item->name,"name%d",i);
+    for(i=0;i<RECORDS;i++){
+        strcpy(current_item->name,bonds[i]);
+        if(i<RECORDS-1){
+            current_item->next = (jb *)malloc(sizeof(jb));
+            current_item = current_item->next;
+        }
     }
     current_item->next = NULL;
     last_item = current_item;
     current_item = first_item;
-    while(current_item != NULL){
+    while(current_item!=NULL){
         printf("%s\n",current_item->name);
         current_item = current_item->next;
     }
