@@ -17,9 +17,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <sys/types.h>
+#include <string.h>
+#include <fcntl.h>
+#include <windows.h> 
 #include <time.h>
+#include <random.h> 
 
 int main(int argc, char **argv); 
+int show_stat_info(char *fname, struct stat *buf);
 
 int show_stat_info(char *fname, struct stat *buf)
 {
@@ -29,12 +35,19 @@ int show_stat_info(char *fname, struct stat *buf)
 
 int main(int argc, char *argv[])
 {
-    struct stat info;
-    if (stat(argv[1], &info) == -1)
-    {
-        perror(argv[1]);
+    struct stat fbuf; 
+    int x;
+     x=stat("fileinfo.c", &fbuf);
+     if(x!=0)
+     {
+        perror("stat");
         exit(1);
-    }
-    show_stat_info(argv[1], &info);
+     }
+    show_stat_info("fileinfo.c", &fbuf);
+    puts("Last modified: %s", ctime(&fbuf.st_mtime)); 
+    puts("Last accessed: %s", ctime(&fbuf.st_atime) );
+    puts("Last changed: %s", ctime(&fbuf.st_ctime) );
+    puts("File size: %d", fbuf.st_size);
+    puts("File inode: %d", fbuf.st_ino);
     return 0;
 }
